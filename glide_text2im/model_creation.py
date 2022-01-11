@@ -11,7 +11,7 @@ from glide_text2im.tokenizer.bpe import get_encoder
 
 def model_and_diffusion_defaults():
     return dict(
-        image_size=64,
+        image_size=128,
         num_channels=192,
         num_res_blocks=3,
         channel_mult="",
@@ -42,7 +42,7 @@ def model_and_diffusion_defaults_upsampler():
     result = model_and_diffusion_defaults()
     result.update(
         dict(
-            image_size=256,
+            image_size=512,
             num_res_blocks=2,
             noise_schedule="linear",
             super_res=True,
